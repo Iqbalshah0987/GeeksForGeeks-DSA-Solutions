@@ -1,0 +1,12 @@
+<h2><a href="https://www.geeksforgeeks.org/problems/duplicate-subtrees/1">All Duplicate Subtrees</a></h2><h3>Difficulty Level : Difficulty: Medium</h3><hr><div class="problems_problem_content__Xm_eO" style="--text-color: var(--problem-text-color);"><p><span style="font-size: 14pt;">Given the&nbsp;root&nbsp;of a binary tree, find all&nbsp;duplicate subtrees present in the tree. </span><span style="font-size: 14pt;">Two subtrees are considered duplicates if they have the same structure and identical node values at corresponding positions.</span></p>
+<p><span style="font-size: 14pt;">Return the root of each tree in the form of a list array and the driver code will print the tree in preorder tree traversal in lexicographically increasing order.</span></p>
+<p><span style="font-size: 14pt;"><strong>Examples:<br></strong></span></p>
+<pre><span style="font-size: 14pt;"><strong>Input:</strong> root = [1, 2, 3, 4, N, 2, 4, N, N, 4] <br><img src="https://media.geeksforgeeks.org/img-practice/prod/addEditProblem/928069/Web/Other/blobid1_1778328585.png" alt="" width="265" height="203"><br><strong>Output: <br></strong>2 4 &nbsp; <br>4<br><strong>Explanation: </strong></span><span style="font-size: 18.6667px;">The tree contains two duplicate subtrees:
+The subtree rooted at node 4.
+The subtree rooted at node 2 having left child 4.
+Therefore, the roots of the duplicate subtrees are 2 and 4.</span></pre>
+<pre><span style="font-size: 14pt;"><strong>Input:</strong> root = [5, 4, 6, 3, 4, N, N, N, N, 3, 6] <strong><br></strong><img src="https://media.geeksforgeeks.org/img-practice/prod/addEditProblem/928069/Web/Other/blobid0_1778394171.png" width="219" height="225"><br><strong>Output: <br></strong>3<br>6<br><strong>Explanation: </strong></span><span style="font-size: 18.6667px;">The binary tree contains two duplicate subtrees:
+The subtree rooted at node 3
+The subtree rooted at node 6
+Both of these subtrees appear more than once in the tree with the same structure and node values.</span></pre>
+<p><span style="font-size: 14pt;"><strong>Constraints:</strong><br>1</span><span style="font-size: 18px;">&nbsp;</span><span style="font-size: 18px;">≤</span><span style="font-size: 14pt;">&nbsp;height of binary tree&nbsp;</span><span style="font-size: 18px;">&nbsp;≤&nbsp;</span><span style="font-size: 14pt;">10</span><sup>3</sup></p></div><br><p><span style=font-size:18px><strong>Topic Tags : </strong><br><code>Tree</code>&nbsp;<code>Recursion</code>&nbsp;
