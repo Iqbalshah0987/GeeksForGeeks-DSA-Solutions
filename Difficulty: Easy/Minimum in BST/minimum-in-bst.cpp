@@ -19,8 +19,11 @@ class Solution {
         // code here
         if(root == NULL) return -1;
         
-        if(root->left == NULL) return root->data;
+        Node *curr = root;
+        while(curr->left != NULL){
+            curr = curr->left;
+        }
         
-        return minValue(root->left);
+        return curr->data;
     }
 };
