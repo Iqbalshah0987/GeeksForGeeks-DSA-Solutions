@@ -1,24 +1,41 @@
+class Node
+{
+  public:
+    Node *child[2];
+    bool isEnd;
+
+    Node()
+    {
+        child[0] = child[1] = nullptr;
+        isEnd = false;
+    }
+};
 class Solution {
   public:
     vector<vector<int>> uniqueRow(vector<vector<int>>& mat) {
         // code here
-        vector<vector<int>> result;
-        result.push_back(mat[0]);
-        
         int row = mat.size();
         int col = mat[0].size();
         
-        for(int i=1; i<row; i++){
-            bool duplicate = false;
-            for(int j = 0; j<result.size(); j++){
+        vector<vector<int>> result;
+        Node *root = new Node();
+        
+        for(int i=0; i<row; i++){
+            
+            Node *curr = root;
+            for(int j=0; j<col; j++){
                 
-                if(result[j] == mat[i]){
-                    duplicate = true;
-                    break;
+                int bit = mat[i][j];
+                
+                if(curr->child[bit] == nullptr){
+                    curr->child[bit] = new Node();
                 }
+                
+                curr = curr->child[bit];
             }
             
-            if(!duplicate){
+            if(!curr->isEnd){
+                curr->isEnd = true;
                 result.push_back(mat[i]);
             }
         }
