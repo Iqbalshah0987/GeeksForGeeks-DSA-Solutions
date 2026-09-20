@@ -11,19 +11,19 @@ class Solution {
             
             if(used.count(s[i])) continue;
             used.insert(s[i]);
-        
-            swap(s[index], s[i]);
+            
+            swap(s[i], s[index]);
             solve(s, index+1, ans);
             
-            // backtrach
-            swap(s[index], s[i]);
+            // backtrack
+            swap(s[i], s[index]);
         }
     }
     vector<string> findPermutation(string &s) {
         // Code here
-        
         vector<string> ans;
         solve(s, 0, ans);
+        
         return ans;
     }
 };
