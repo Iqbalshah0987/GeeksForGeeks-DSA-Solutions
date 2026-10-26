@@ -2,6 +2,7 @@ class Solution {
   public:
     void sort012(vector<int>& arr) {
         // code here
+        
         int i=0, j=0, k=arr.size()-1;
         
         while(j<=k){
