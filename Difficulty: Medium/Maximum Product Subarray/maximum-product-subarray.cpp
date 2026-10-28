@@ -2,19 +2,19 @@ class Solution {
   public:
     int maxProduct(vector<int> &arr) {
         // code here
-        int n = arr.size();
-        int maxprod=INT_MIN, leftprod=1, rightprod=1;
         
+        int n = arr.size();
+        int leftProduct=1, rightProduct=1, maxProduct=INT_MIN;
         for(int i=0; i<n; i++){
-            leftprod *= arr[i];
-            rightprod *= arr[n-i-1];
+            leftProduct *= arr[i];
+            rightProduct *= arr[n-1-i];
             
-            maxprod = max({maxprod, leftprod, rightprod});
+            maxProduct = max({maxProduct, leftProduct, rightProduct});
             
-            if(leftprod==0) leftprod=1;
-            if(rightprod==0) rightprod=1;
+            if(leftProduct==0) leftProduct=1;
+            if(rightProduct==0) rightProduct=1;
         }
         
-        return maxprod;
+        return maxProduct;
     }
 };
