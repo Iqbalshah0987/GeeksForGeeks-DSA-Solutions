@@ -8,7 +8,7 @@ class Solution {
         for(int num: arr){
             sum += num;
             
-            if(sum==0 || st.find(sum)!=st.end()){
+            if(sum==0 || st.find(sum) != st.end()){
                 return true;
             }
             
