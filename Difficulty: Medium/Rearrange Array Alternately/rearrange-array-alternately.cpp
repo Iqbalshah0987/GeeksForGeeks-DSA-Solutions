@@ -11,13 +11,12 @@ class Solution {
         
         for(int i=0; i<n; i++){
             if(i%2 == 0){
-                arr[i] += (arr[maxidx]%maxele) * maxele;
-                maxidx--;
+                arr[i] += (arr[maxidx--]%maxele) * maxele;
             }else{
-                arr[i] += (arr[minidx]%maxele) * maxele;
-                minidx++;
+                arr[i] += (arr[minidx++]%maxele) * maxele;
             }
         }
+        
         
         for(int i=0; i<n; i++){
             arr[i] /= maxele;
